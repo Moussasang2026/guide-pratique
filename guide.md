@@ -105,5 +105,54 @@ Git permet de suivre les modifications apportées aux fichiers d’un projet et 
 
 ## Pousser les modifications sur GitHub.
 
+Une fois vos modifications locales validées avec Git, vous pouvez les envoyer vers un dépôt distant sur GitHub pour les partager ou les sauvegarder. Voici comment procéder.
+
+### Étapes pour pousser les modifications
+
+1. **Assurez-vous que vos modifications sont validées localement** :
+   - Validez vos modifications avec un message clair :
+     ```bash
+     git commit -m "Description des modifications effectuées"
+     ```
+   - Si vous n’avez pas encore ajouté ou validé vos modifications, utilisez :
+     ```bash
+     git add .
+     git commit -m "Message clair pour la validation"
+     ```
+
+2. **Envoyez les modifications vers le dépôt distant** :
+   - Utilisez la commande suivante pour pousser les changements dans une branche spécifique :
+     ```bash
+     git push origin <nom-de-la-branche>
+     ```
+     Exemple pour une branche nommée `main` :
+     ```bash
+     git push origin main
+     ```
+
+3. **Créer un dépôt distant (si ce n’est pas déjà fait)** :
+   - Si le dépôt distant n’existe pas encore, créez-le sur GitHub.
+   - Ajoutez le dépôt distant à votre projet local avec la commande :
+     ```bash
+     git remote add origin https://github.com/votre-utilisateur/nom-du-depot.git
+     ```
+   - Ensuite, poussez les modifications :
+     ```bash
+     git push -u origin main
+     ```
+
+### Vérifier que les modifications ont été poussées
+- Accédez à votre dépôt sur GitHub ([https://github.com](https://github.com)).
+- Vérifiez que les fichiers et les modifications sont bien visibles dans la branche concernée.
+
+### Conseils importants
+- **Synchronisation régulière** : Poussez vos modifications fréquemment pour éviter les pertes de données ou des conflits lors du travail collaboratif.
+- **Utiliser des branches** : Travaillez sur des branches dédiées pour isoler les nouvelles fonctionnalités ou correctifs.
+- **Conflits potentiels** : Si d’autres collaborateurs ont modifié la même branche, vous devrez peut-être exécuter un `git pull` avant de pousser vos modifications.
+
+---
+
+En suivant ces étapes, vous pourrez collaborer efficacement et maintenir un dépôt synchronisé entre votre machine locale et GitHub.
+
 ## Conclusion
 Ce guide est destiné aux débutants souhaitant maîtriser Git et GitHub.
