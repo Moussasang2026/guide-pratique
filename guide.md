@@ -51,14 +51,58 @@ Cloner un dépôt permet de copier un projet hébergé sur GitHub (ou un autre s
   cd guide-pratique
   ```
 
-### Remarques importantes
-- Assurez-vous d'avoir Git installé sur votre machine. Vous pouvez vérifier avec :
-```bash
-git --version
+### Ajouter des fichiers et gerer les versions
+
+
+Git permet de suivre les modifications apportées aux fichiers d’un projet et de maintenir un historique complet des versions. Voici comment ajouter des fichiers et gérer les versions avec Git.
+
+### Étapes pour ajouter des fichiers et gérer les versions
+
+1. **Ajouter un nouveau fichier ou modifier un fichier existant** :
+   - Créez un fichier ou apportez des modifications à un fichier existant dans votre projet local.
+   - Par exemple, ajoutez un fichier nommé `exemple.txt` :
+     ```bash
+     echo "Ceci est un exemple." > exemple.txt
+     ```
+
+2. **Suivre les modifications avec Git** :
+   - Ajoutez le fichier ou les modifications à l'index (zone de staging) avec la commande :
+     ```bash
+     git add <nom-du-fichier>
+     ```
+     Exemple :
+     ```bash
+     git add exemple.txt
+     ```
+   - Pour ajouter tous les fichiers modifiés ou nouveaux, utilisez :
+     ```bash
+     git add .
+     ```
+
+3. **Valider les modifications** :
+   - Validez les fichiers ajoutés à l’index avec un message décrivant les modifications :
+     ```bash
+     git commit -m "Ajout du fichier exemple.txt avec du contenu initial"
+     ```
+
+4. **Envoyer les modifications sur GitHub** :
+   - Si vous souhaitez sauvegarder vos modifications sur GitHub (ou un autre dépôt distant), utilisez la commande :
+     ```bash
+     git push origin <nom-de-la-branche>
+     ```
+     Exemple pour une branche `main` :
+     ```bash
+     git push origin main
+     ```
+
+### Vérifier l’historique des versions
+- Vous pouvez consulter l’historique des validations (commits) avec :
+  ```bash
+  git log
+
 
    
 
-## Ajouter des fichiers et gérer les versions.
 ## Pousser les modifications sur GitHub.
 
 ## Conclusion
